@@ -13,7 +13,7 @@ class Redirect extends Component {
   }
 }
 
-export default class App extends Component {
+class App extends Component {
   state = { redirectTo: null }
 
   redirectTo = url => this.setState({ redirectTo: url })
@@ -37,3 +37,6 @@ export default class App extends Component {
     )
   }
 }
+
+export default App
+
