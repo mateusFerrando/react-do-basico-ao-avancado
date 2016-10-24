@@ -7,7 +7,7 @@ class Redirect extends Component {
     }
     this.props.afterRedirect()
   }
-
+  
   render() {
     return <span>Redirecting to {this.props.to}....</span>
   }
@@ -15,11 +15,11 @@ class Redirect extends Component {
 
 export default class App extends Component {
   state = { redirectTo: null }
-
+  
   redirectTo = url => this.setState({ redirectTo: url })
-
+  
   reset = () => this.setState({ redirectTo: null })
-
+  
   render() {
     if (this.state.redirectTo) {
       return <Redirect to={this.state.redirectTo} afterRedirect={this.reset} />
