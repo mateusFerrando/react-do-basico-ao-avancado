@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Redirect extends Component {
   componentDidMount() {
-    if (confirm(`Você realmente quer ir para ${this.props.to}?`)) {
+    if (window.confirm(`Você realmente quer ir para ${this.props.to}?`)) {
       window.location.href = this.props.to
     }
     this.props.afterRedirect()
